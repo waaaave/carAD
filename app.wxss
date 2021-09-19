@@ -1,0 +1,11 @@
+@import 'style/reset.wxss';
+@import 'style/hero.wxss';
+@import 'style/button.wxss';
+
+page {
+  background: #f8f8f8;
+}
+
+.section {
+  height: 100vh;
+}
