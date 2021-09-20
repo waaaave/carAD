@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/stories/index",
     "pages/index/index",
+    "pages/stories/index",
     "pages/vehicles/show"
   ],
   "window":{
