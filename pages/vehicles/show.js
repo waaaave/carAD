@@ -5,6 +5,11 @@ Page({
   data: {
     entity: null
   },
+  testDrive(){
+    wx.showToast({
+      title: '暂不支持',
+    })
+  },
   preview(event) {
     const slidesName = event.target.dataset.slides
     const index = event.target.dataset.index

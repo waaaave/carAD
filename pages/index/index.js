@@ -5,6 +5,11 @@ Page({
     slides: null,
     entities: null
   },
+  testDrive(){
+    wx.showToast({
+      title: '暂不支持',
+    })
+  },
   readMore(event) {
     wx.navigateTo({
       url: `/pages/vehicles/show?id=${ event.target.dataset.id }`

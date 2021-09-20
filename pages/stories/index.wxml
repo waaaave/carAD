@@ -1,3 +1,28 @@
-<view>
-stories
+<view class="cards">
+  <view class="card" hover-class="hover" wx:for="{{ entities }}" wx:key="id">
+    <navigator url="/pages/stories/show?id={{ item.id }}" hover-class="none">
+      <video
+      hidden="{{currentVid!== item.id}}"
+      poster="{{item.image}}"
+      id="{{item.id}}"
+        src="{{item.video}}"
+        object-fit="cover"
+        duration="{{item.duration_raw}}"
+      ></video>
+      <image
+      hidden="{{currentVid == item.id}}"
+      data-vid="{{item.id}}"
+        bindtap="play"
+      src="{{ item.image }}" mode="aspectFill">
+      <view class="label">{{item.duration}}</view>
+    </image>
+      <view class="content">
+        <view class="header">
+          {{ item.header }}
+        </view>
+        <view class="description">{{ item.description }}</view>
+        <view class="meta">{{ item.meta.price }}</view>
+      </view>
+    </navigator>
+  </view>
 </view>
